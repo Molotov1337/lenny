@@ -1,107 +1,90 @@
-#page-wrap {
-     width: auto;
-     margin: 0 auto;
-	 margin-top: 30px;
-	cursor:url(/img/cursor.png), auto;
+:root {
+  --bg-color: #263d63;
+  --btn-start: #2e466e;
+  --btn-end: #415989;
+  --btn-border: #1f2f47;
 }
-
-
-hr {
-	color: #737373;
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #737373;
-    margin: 1em 0;
-    padding: 0; 
-	cursor:url(/img/cursor.png), auto;
+* {
+  cursor: url('img/cursor.png'), auto !important;
 }
-
 body {
-	background-color:#263d63; /* #2e466e */
-	cursor:url(/img/cursor.png), auto;
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
 }
-
+hr {
+  color: #737373;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #737373;
+  margin: 1em 0;
+  padding: 0;
+}
+.popup-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: none;
+  z-index: 1000;
+}
+.nav-tabs .nav-link {
+  color: #fff;
+}
 .myBtn {
-	-moz-box-shadow:inset 0px 0px 15px 3px #23395e;
-	-webkit-box-shadow:inset 0px 0px 15px 3px #23395e;
-	box-shadow:inset 0px 0px 15px 3px #23395e;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2e466e), color-stop(1, #415989));
-	background:-moz-linear-gradient(top, #2e466e 5%, #415989 100%);
-	background:-webkit-linear-gradient(top, #2e466e 5%, #415989 100%);
-	background:-o-linear-gradient(top, #2e466e 5%, #415989 100%);
-	background:-ms-linear-gradient(top, #2e466e 5%, #415989 100%);
-	background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2e466e', endColorstr='#415989',GradientType=0);
-	background-color:#2e466e;
-	-moz-border-radius:17px;
-	-webkit-border-radius:17px;
-	border-radius:17px;
-	border:1px solid #1f2f47;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:tahoma, sans-serif;
-	font-size:14.5px;
-	padding:6px 13px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #263666;
-	text-align: center;
-	cursor:url(/img/cursor.png), auto;
+  -moz-box-shadow: inset 0px 0px 15px 3px #23395e;
+  -webkit-box-shadow: inset 0px 0px 15px 3px #23395e;
+  box-shadow: inset 0px 0px 15px 3px #23395e;
+  background: linear-gradient(to bottom, var(--btn-start) 5%, var(--btn-end) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2e466e', endColorstr='#415989', GradientType=0);
+  background-color: var(--btn-start);
+  -moz-border-radius: 17px;
+  -webkit-border-radius: 17px;
+  border-radius: 17px;
+  border: 1px solid var(--btn-border);
+  display: inline-block;
+  color: #ffffff;
+  font-family: tahoma, sans-serif;
+  font-size: 14.5px;
+  padding: 6px 13px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #263666;
+  text-align: center;
 }
-
-.myBtn:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #415989), color-stop(1, #2e466e));
-	background:-moz-linear-gradient(top, #415989 5%, #2e466e 100%);
-	background:-webkit-linear-gradient(top, #415989 5%, #2e466e 100%);
-	background:-o-linear-gradient(top, #415989 5%, #2e466e 100%);
-	background:-ms-linear-gradient(top, #415989 5%, #2e466e 100%);
-	background:linear-gradient(to bottom, #415989 5%, #2e466e 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#415989', endColorstr='#2e466e',GradientType=0);
-	background-color:#415989;
-	cursor:url(/img/cursor.png), auto;
-}
-
-.myBtn:active {
-	position:relative;
-	top:1px;
-	cursor:url(/img/cursor.png), auto;
-}
-
 .myBtn:focus {
-	outline:0;
-	cursor:url(/img/cursor.png), auto;
+  outline: none;
+  box-shadow: inset 0px 0px 15px 3px #23395e;
 }
-
-.tg  {
-	border-collapse:collapse;
-	border-spacing:0;
-	cursor:url(/img/cursor.png), auto;
+.myBtn::-moz-focus-inner {
+  border: 0;
+  padding: 0;
 }
-
-.tg td {
-	font-family:Arial, sans-serif;
-	font-size:14px;
-	padding:10px 5px;
-	border-style:solid;
-	border-width:1px;
-	overflow:hidden;
-	word-break:normal;
-	cursor:url(/img/cursor.png), auto;
+.myBtn:hover {
+  background: linear-gradient(to bottom, var(--btn-end) 5%, var(--btn-start) 100%);
+  background-color: var(--btn-end);
 }
-
-.tg th{
-	font-family:Arial, sans-serif;
-	font-size:14px;
-	font-weight:normal;
-	padding:7px 5px;
-	border-width:1px;
-	overflow:hidden;
-	word-break:normal;
-	cursor:url(/img/cursor.png), auto;
+.myBtn:active {
+  position: relative;
+  top: 1px;
 }
-
-.tg .vtop {
-	vertical-align:top;
-	cursor:url(/img/cursor.png), auto;
+.tg {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.tg td, .tg th {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  padding: 10px 5px;
+  border-style: solid;
+  border-width: 1px;
+  overflow: hidden;
+  word-break: normal;
+}
+.tg th {
+  font-weight: normal;
+  padding: 7px 5px;
 }
